@@ -170,7 +170,7 @@ body{
 .speaker_box {
     position: fixed;
     z-index: 14;
-    top: 20px;
+    top: 100px;
     left: 20px;
     width: 200px;
     background-color: #000000;
@@ -180,7 +180,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
@@ -188,19 +188,21 @@ body{
 .volume-slider {
     width: 100%;
     z-index: 14;
-    margin-top: 10px;
+    margin-top: 3px;
     -webkit-appearance: none;
     appearance: none;
     height: 8px;
-    background: #ddd;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
     outline: none;
     opacity: 0.7;
     transition: opacity .2s;
 }
+
 .volume-slider:hover {
     opacity: 1;
     z-index: 14;
 }
+
 .volume-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     z-index: 14;
@@ -210,6 +212,7 @@ body{
     background: #00ffff;
     cursor: pointer;
     border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
 }
 
 .volume-slider::-moz-range-thumb {
@@ -219,4 +222,32 @@ body{
     background: #00f7ff;
     cursor: pointer;
     border-radius: 50%;
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff, 0 0 40px #00f7ff;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 225px;
+    height: 80px;
+}
+
+
+audio {
+    display: block;
+    margin-top: 20px;
+}
+
+.controls {
+    position: fixed;
+    top: 20px;
+    left: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    box-shadow: 0 0 10px #ffffff;
+    z-index: 14;
 }
