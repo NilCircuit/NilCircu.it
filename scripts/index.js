@@ -131,24 +131,34 @@ function loadSite() {
     // Chooses random song
     if (randomSong === 0) {
         music.src = './sounds/dodge_this.mp3';
+        document.title = 'NilCircuit | Dodge This';
     } else if (randomSong === 1) {
         music.src = './sounds/speed_is_life.mp3';
+        document.title = 'NilCircuit | Speed Is Life';
     } else if (randomSong === 2) {
         music.src = './sounds/CuteDepressed.mp3';
+        document.title = 'NilCircuit | Cute Depressed';
     } else if (randomSong === 3) {
         music.src = './sounds/wyw.mp3';
+        document.title = 'NilCircuit | What You Want';
     } else if (randomSong === 4) {
         music.src = './sounds/Young_Kid.mp3';
+        document.title = 'NilCircuit | Young Kid';
     } else if (randomSong === 5) {
-        music.src = './sounds/spotifydown.com - TOXIC.mp3';
+        music.src = './sounds/TOXIC.mp3';
+        document.title = 'NilCircuit | TOXIC';
     } else if (randomSong === 6) {
-        music.src = './sounds/spotifydown.com - COWBELL GOTH.mp3';
+        music.src = './sounds/COWBELL_GOTH.mp3';
+        document.title = 'NilCircuit | COWBELL GOTH';
     } else if (randomSong === 7) {
-        music.src = './sounds/spotifydown.com - On My Own.mp3';
+        music.src = './sounds/On_My_Own.mp3';
+        document.title = 'NilCircuit | On My Own';
     } else if (randomSong === 8) {
-        music.src = './sounds/spotifydown.com - LOVELY BASTARDS.mp3';
+        music.src = './sounds/LOVELY_BASTARDS.mp3';
+        document.title = 'NilCircuit | LOVELY BASTARDS';
     } else if (randomSong === 9) {
-        music.src = './sounds/spotifydown.com - NXSTY BLOOD.mp3';
+        music.src = './sounds/NXSTY_BLOOD.mp3';
+        document.title = 'NilCircuit | NXSTY BLOOD';
     }
 
     setTimeout(function () {
