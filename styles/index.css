@@ -262,7 +262,7 @@ audio {
     left: 260px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1px;
     z-index: 999;
     box-shadow: 0 0 10px #ffffff;
     z-index: 14;
@@ -278,4 +278,14 @@ audio {
         0 0 5px #00ffff, 
         0 0 10px #00ffff, 
         0 0 20px #00ffff;
+}
+
+hr{
+    position: relative;
+    left: -1px;
+    width: 100%;
+    border-top: 1px solid #00f7ff;
+    border-bottom: 1px solid #00f7ff;
+    border-left: 1px solid #00f7ff;
+    border-right: 1px solid #00f7ff;
 }
