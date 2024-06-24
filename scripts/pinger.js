@@ -1,24 +1,21 @@
 const ipInput = document.getElementById('ipInput')
-const pingResponse = document.getElementById('pingResponse')
+const responseContainer = document.getElementById('pingResponseContainer')
+const responseText = document.getElementById('pingResponse')
+var ping = new Ping();
 
 
-function pingIP(ipAddress) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          pingResponse.innerText = `Ping successful to ${ipAddress}`
-        } else {
-          pingResponse.innerText = `Ping failed to ${ipAddress}`;
-        }
-      }
-    };
-    xhr.open('HEAD', 'http://' + ipAddress);
-    xhr.send();
-}
 
 
 
 function pingSend(){
-    pingIP(this.value)
+    const url = ipInput.value.startsWith('https://') ? ipInput.value : `https://${ipInput.value}`;
+    
+    ping.ping(url, function(err, data) {
+        // Display error if an error is returned.
+        if (err) {
+            responseText.innerText = `Error loading resource: ${err}`;
+        } else {
+            responseText.innerText = ` Response Time (MS): ${data}`;
+        }
+    });
 }

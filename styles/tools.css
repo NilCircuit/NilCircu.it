@@ -35,14 +35,18 @@
 /* Start of pinger */
 
 .pingerContainer{
+    padding: 5px;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     opacity: 1;
     top: 80%;
     left: 50%;
     width: 700px;
     height: 200px;
     transform: translate(-50%, -50%);
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, .5);
     box-shadow: 0 0 15px rgb(0, 0, 0);
@@ -50,12 +54,93 @@
     z-index: 14;
 }
 
-#pingResponse{
+#pingResponseContainer{
+    position: relative;
     font-family: Comfortaa;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    height: 85px;
+    width: 500px;
+    background-color: #000000;
+    border: 2px solid #2c2c2c;
+    border-radius: 15px;
+    transform: translateX(-50%);
+    
+}
+
+#pingResponse{
+    color: #00ffff;
+    text-align: center;
+    font-size: 22px;
+    text-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
 }
 
 #ipInput{
+    transition: box-shadow 100ms;
+    position: relative;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    left: 50%;
+    height: 50px;
+    width: 250px;
+    font-size: 22px;
+    transform: translateX(-50%);
     font-family: Comfortaa;
+    background-color: #000000;
+    border: 2px solid #2c2c2c;
+    border-radius: 15px;
+    color: #00ffff;
+    text-align: center;
+    text-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
+}
+
+#ipInput:hover{
+    transition: box-shadow 500ms;
+    box-shadow: 0 0 5px rgb(0, 247, 255), 
+                0 0 10px rgb(0, 247, 255), 
+                0 0 20px rgb(0, 247, 255);
+}
+
+#ipInput:focus{
+    transition: box-shadow 100ms;
+    box-shadow: 0 0 5px rgb(0, 247, 255), 
+                0 0 10px rgb(0, 247, 255), 
+                0 0 20px rgb(0, 247, 255);
+}
+
+#sendBtn{
+    transition: box-shadow 500ms;
+    position: relative;
+    font-size: 22px;
+    width: 33%;
+    left: 50%;
+    height: 55px;
+    transform: translateX(-50%);
+    color: #00ffff;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    font-family: Comfortaa;
+    background-color: #000000;
+    border: 2px solid #2c2c2c;
+    border-radius: 15px;
+    text-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
+
+}
+
+#sendBtn:hover{
+    transition: box-shadow 500ms;
+    box-shadow: 0 0 5px rgb(0, 247, 255), 
+                0 0 10px rgb(0, 247, 255), 
+                0 0 20px rgb(0, 247, 255);
+                cursor: pointer;
 }
 
 /* End of pinger */

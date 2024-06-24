@@ -50,7 +50,11 @@
             <button class="formBtn" id="squareWaveButton" onclick="toggleWaveform('square')">S</button>
         </div>
 
-        <div class="pingerContainer"></div>
+        <div class="pingerContainer">
+            <input type="text" id="ipInput">
+            <div id="pingResponseContainer"><p id="pingResponse">Test</p></div>
+            <button id="sendBtn" onclick="pingSend()">Send Ping</button>
+        </div>
 
         <canvas id="waveformCanvas"></canvas>
 
@@ -62,7 +66,8 @@
 
 
     </body>
-
+    
+    <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/pinger.js"></script>
 
