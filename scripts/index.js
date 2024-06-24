@@ -1,18 +1,18 @@
 const loader = document.getElementById('waitForClick');
 const music = document.getElementById('background-music');
 const volumeControl = document.getElementById('volumeControl');
-
 const canvas = document.getElementById('waveformCanvas');
 const canvasCtx = canvas.getContext('2d');
-
+const nextBtn = document.getElementById('skipBtn');
+const smoothingFactor = 0.8; // Adjust smoothing factor (0.0 to 1.0, where higher values mean smoother but slower updates)
+const soundLabel = document.getElementById('speakerIcon');
+const volumeLabel = document.getElementById('volumeLabel');
 let audioContext;
 let audioSrc;
 let analyser;
 let bufferLength;
 let dataArray;
 let smoothedDataArray; // Array to hold smoothed waveform data
-const smoothingFactor = 0.8; // Adjust smoothing factor (0.0 to 1.0, where higher values mean smoother but slower updates)
-
 let currentWaveform = 'waveform'; // Default to audio waveform
 
 function initializeAudioContext() {
@@ -46,18 +46,20 @@ function drawWaveform() {
     canvasCtx.fillStyle = '#282c34';
     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-    canvasCtx.lineWidth = 3;
+    canvasCtx.lineWidth = 2;
     canvasCtx.strokeStyle = '#00ff00';
 
     canvasCtx.beginPath();
 
     const sliceWidth = canvas.width * 1.0 / bufferLength;
     let x = 0;
+    const intenistyFactor = 2;
 
     for (let i = 0; i < bufferLength; i++) {
-        const v = smoothedDataArray[i] / 128.0;
+        const v = (smoothedDataArray[i] / 128.0 - 1)  * intenistyFactor + 1;
         const y = v * canvas.height / 2;
 
+        
         if (i === 0) {
             canvasCtx.moveTo(x, y);
         } else {
@@ -125,10 +127,49 @@ function draw() {
 function loadSite() {
     loader.style.opacity = 0;
 
+
+
+    getRandomSong()
+
+    setTimeout(function () {
+        music.volume = 0.075; // Set initial volume
+        music.play();
+        loader.remove();
+        initializeAudioContext(); // Initialize the audio context when the music starts playing
+        draw(); // Start drawing the waveform
+    }, 350);
+    window.removeEventListener('click', loadSite);
+}
+
+window.addEventListener('click', loadSite);
+
+volumeControl.addEventListener('input', function () {
+    music.volume = this.value;
+    if (this.value <= 0) {
+        soundLabel.src = './images/mute.png';
+    } else if (this.value < 0.4) {
+        soundLabel.src = './images/low-vol.png';
+    } else if (this.value >= 0.4) {
+        soundLabel.src = './images/high-vol.png';
+    }
+
+    volumeLabel.innerText = `${Math.ceil(this.value * 100)}%`
+    
+});
+
+// Set initial volume
+music.volume = volumeControl.value;
+
+
+
+
+function getRandomSong(){
+    // Chooses random song
+
     let randomSong = Math.floor(Math.random() * 10);
     console.log(randomSong);
+    music.load()
 
-    // Chooses random song
     if (randomSong === 0) {
         music.src = './sounds/dodge_this.mp3';
         document.title = 'NilCircuit | Dodge This';
@@ -160,22 +201,7 @@ function loadSite() {
         music.src = './sounds/NXSTY_BLOOD.mp3';
         document.title = 'NilCircuit | NXSTY BLOOD';
     }
-
-    setTimeout(function () {
-        music.volume = 0.075; // Set initial volume
-        music.play();
-        loader.remove();
-        initializeAudioContext(); // Initialize the audio context when the music starts playing
-        draw(); // Start drawing the waveform
-    }, 350);
-    window.removeEventListener('click', loadSite);
+    music.play()
 }
 
-window.addEventListener('click', loadSite);
-
-volumeControl.addEventListener('input', function () {
-    music.volume = this.value;
-});
-
-// Set initial volume
-music.volume = volumeControl.value;
+nextBtn.addEventListener('click', getRandomSong)

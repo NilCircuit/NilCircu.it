@@ -1,0 +1,61 @@
+/* Start of fonts */
+
+@font-face {
+    font-family: Comfortaa;
+    src: url('../fonts/Comfortaa.ttf');
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url('../fonts/Arimo-Regular.ttf');
+}
+
+@font-face {
+    font-family: ChakraPetch;
+    src: url('../fonts/ChakraPetch-Medium.ttf');
+}
+
+@font-face {
+    font-family: Tiny5;
+    src: url('../fonts/Tiny5-Regular.ttf');
+}
+
+@font-face {
+    font-family: Silkscreen;
+    src: url('../fonts/Silkscreen-Regular.ttf');
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('../fonts/Raleway-Light.ttf');
+}
+
+/* End of fonts */
+
+/* Start of pinger */
+
+.pingerContainer{
+    position: absolute;
+    opacity: 1;
+    top: 80%;
+    left: 50%;
+    width: 700px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    backdrop-filter: blur(7px);
+    z-index: 14;
+}
+
+#pingResponse{
+    font-family: Comfortaa;
+}
+
+#ipInput{
+    font-family: Comfortaa;
+}
+
+/* End of pinger */

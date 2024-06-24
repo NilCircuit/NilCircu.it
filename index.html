@@ -4,6 +4,7 @@
     <head>
         <title>NilCircuit</title>
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/tools.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
 
@@ -14,7 +15,15 @@
         </div>
 
         <div class="speaker_box">
-            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.075" id="volumeControl">
+            <center>
+                <div class="volume-control-container">
+                    <span class="volume-label-container">
+                        <img id="speakerIcon" src="images/low-vol.png" alt="Speaker Icon" class="speaker-icon">
+                        <p id="volumeLabel">10%</p>
+                    </span>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.075" id="volumeControl">
+                </div>
+            </center>
         </div>
         
         <img src="images/car_driving.gif" class="bg" style="width: 100%; height: 100%;">
@@ -22,7 +31,7 @@
         <div class="mainContainer">
 
             <h1 class='main'>
-                WELCOME TO NILCIRCUIT
+                Welcome To NilCircuit
             </h1>
     
             <div class="bioContainer">
@@ -33,12 +42,15 @@
 
         </div>
 
+        <img id="skipBtn" src="images/skip.png" alt="Skip Button" class="glowing-img">
+
         <div class="controls">
-            <button class="formBtn" id="waveformButton" onclick="toggleWaveform('waveform')">V</button>
+            <button class="formBtn" id="waveformButton" onclick="toggleWaveform('waveform')">W</button>
             <hr>
             <button class="formBtn" id="squareWaveButton" onclick="toggleWaveform('square')">S</button>
         </div>
 
+        <div class="pingerContainer"></div>
 
         <canvas id="waveformCanvas"></canvas>
 
@@ -52,5 +64,6 @@
     </body>
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/pinger.js"></script>
 
 </html>
