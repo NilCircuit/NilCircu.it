@@ -1,3 +1,5 @@
+
+
 /* Start if rulesets */
 
 @font-face {
@@ -157,7 +159,7 @@ h1.main {
 
 #waitForClick {
     transition: opacity 500ms;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #1f1f1fd5;

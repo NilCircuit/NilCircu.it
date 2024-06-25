@@ -125,9 +125,8 @@ function draw() {
 }
 
 function loadSite() {
+
     loader.style.opacity = 0;
-
-
 
     getRandomSong()
 
