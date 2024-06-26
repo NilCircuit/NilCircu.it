@@ -42,6 +42,8 @@
     gap: 7px;
     opacity: 1;
     top: 80%;
+    margin-left: 5px;
+    margin-right: 5px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
@@ -115,7 +117,7 @@
                 0 0 20px rgb(0, 247, 255);
 }
 
-#sendBtn{
+.btn{
     transition: box-shadow 500ms;
     position: relative;
     font-size: 22px;
@@ -136,16 +138,56 @@
 
 }
 
-#sendBtn:hover{
+.btn:hover{
     transition: box-shadow 500ms;
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
                 0 0 20px rgb(0, 247, 255);
-                cursor: pointer;
+    cursor: pointer;
 }
+
 #ipInput::placeholder{
     color: rgb(99, 88, 88);
     text-shadow: none;
+}
+#actualIP {
+    transition: filter 0.3s ease;
+    filter: blur(6px);
+    position: relative;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    left: calc(100% - 115px);
+    padding-top: 3px;
+    padding-top: 1px;
+    padding-left: 10px;
+    padding-right: 4px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    transform: translateX(-50%);
+    font-family: Comfortaa;
+    background-color: #000000;
+    border-radius: 15px;
+    border: 2px solid #2c2c2c;
+    color: #00ffff;
+    text-align: left;
+    box-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
+    text-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 15px rgb(0, 17, 255);
+}
+
+#actualIP:hover {
+    filter: blur(0px);
+}
+
+#userIP {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* End of pinger */

@@ -1,7 +1,6 @@
+const userIP = document.getElementById('actualIP');
 const ipInput = document.getElementById('ipInput');
-const responseContainer = document.getElementById('pingResponseContainer');
-const responseText = document.getElementById('pingResponse');
-const ping = new Ping();
+
 
 async function pingSend() {
     const url = ipInput.value.startsWith('https://') ? ipInput.value : `https://${ipInput.value}`;
@@ -32,13 +31,39 @@ async function pingSend() {
 
 async function resolveIPAddress(url) {
     try {
-        const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, 'text/html');
-        return xmlDoc.URL.split('/')[2];
+        // Parse the URL to extract the hostname
+        const parsedURL = new URL(url);
+        const hostname = parsedURL.hostname;
+
+        // Fetch DNS records to get the IP address
+        const dnsResponse = await fetch(`https://dns.google/resolve?name=${hostname}&type=A`);
+        
+        if (!dnsResponse.ok) {
+            throw new Error(`Failed to fetch DNS records. Status: ${dnsResponse.status}`);
+        }
+
+        const dnsData = await dnsResponse.json();
+
+        // Check if valid response and extract IP address
+        if (dnsData && dnsData.Answer && dnsData.Answer.length > 0) {
+            return dnsData.Answer[0].data;
+        } else {
+            throw new Error('No valid DNS response');
+        }
+    } catch (error) {
+        console.error('Error resolving IP address:', error);
+        return 'Unknown'; // Return 'Unknown' on error
+    }
+}
+async function getUserIPAddress() {
+    try {
+        const response = await fetch('https://ipinfo.io/json');
+        const data = await response.json();
+        userIP.innerText = `IP - ${data.ip}\nCity - ${data.city}\nRegion - ${data.region}\nCountry - ${data.country}\nPostal - ${data.postal}`;
     } catch (error) {
         console.error('Error fetching IP address:', error);
         return 'Unknown';
     }
 }
+
+getUserIPAddress()

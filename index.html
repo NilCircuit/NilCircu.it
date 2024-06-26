@@ -7,10 +7,14 @@
         <title>NilCircuit</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/tools.css">
-        <link rel="stylesheet" href="styles/phone_numbers.css">
+        <link rel="stylesheet" href="styles/phone_number.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
 
+    <audio id="background-music" loop>
+        <source src="sounds/CuteDepressed.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
     <body>
 
@@ -33,7 +37,7 @@
         </div>
         
         <!-- Background Image -->
-        <img src="images/car_driving.gif" class="bg" style="width: 100%; height: 100%;">
+        
 
         <!-- Main Content Container -->
         <div class="mainContainer">
@@ -49,6 +53,20 @@
         
             </div>
 
+            <!-- Phone Number Search Section -->
+            <div class="phoneNumberContainer">
+                <input type="text" id="phoneNumberInput" placeholder="Enter a Phone Number">
+                <div id="phoneNumberResponseContainer"><p id="phoneNumberResponse"></p></div>
+                <button class="btn" onclick="pingSend()">Search for Information</button>
+            </div>
+
+            <!-- Pinger Section -->
+            <div class="pingerContainer">
+                <input type="text" id="ipInput" placeholder="Enter a URL to ping">
+                <div id="pingResponseContainer"><p id="pingResponse"></p></div>
+                <button class="btn" onclick="pingSend()">Send Ping</button>
+            </div>
+
         </div>
 
         <!-- Skip Button -->
@@ -61,11 +79,6 @@
             <button class="formBtn" id="squareWaveButton" onclick="toggleWaveform('square')">S</button>
         </div>
 
-        <div class="pingerContainer">
-            <input type="text" id="ipInput" placeholder="Enter a URL to ping">
-            <div id="pingResponseContainer"><p id="pingResponse"></p></div>
-            <button id="sendBtn" onclick="pingSend()">Send Ping</button>
-        </div>
 
         <!-- Background Music -->
         <canvas id="waveformCanvas"></canvas>
@@ -75,12 +88,11 @@
             Your browser does not support the audio element.
         </audio>
 
-        <!-- Phone Number Search Section -->
-        <div class="phoneNumberContainer">
-            <input type="text" id="phoneNumberInput" placeholder="Enter a Phone Number">
-            <div id="phoneNumberResponseContainer"><p id="phoneNumberResponse"></p></div>
-            <button id="sendPhoneNumberBtn" onclick="pingSend()">Search for Information</button>
-        </div>
+        <div id="userIP">
+            <h1 id="actualIP"></h1>
+        <div>
+
+        
 
         
 
