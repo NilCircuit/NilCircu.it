@@ -2,6 +2,8 @@
 <html>
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NilCircuit</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/tools.css">
@@ -11,10 +13,13 @@
 
 
     <body>
+
+        <!-- Initial Click to Load Screen -->
         <div id="waitForClick">
             <p class="clickMeText">CLICK TO LOAD PAGE</p>
         </div>
 
+        <!-- Volume Control -->
         <div class="speaker_box">
             <center>
                 <div class="volume-control-container">
@@ -27,14 +32,17 @@
             </center>
         </div>
         
+        <!-- Background Image -->
         <img src="images/car_driving.gif" class="bg" style="width: 100%; height: 100%;">
 
+        <!-- Main Content Container -->
         <div class="mainContainer">
 
             <h1 class='main'>
                 Welcome To NilCircuit
             </h1>
     
+            <!-- Bio Section -->
             <div class="bioContainer">
     
                 <p class="bio"><span  class="founderList"><br>Founder | <a class="founder" href="https://github.com/astralisllc" target="_blank">Astralis</a><br>Co-Founder | <a class="founder" href="https://github.com/teptonic" target="_blank">Teptonic</a></span><br><span class="friendList">Friend | <a class="friend" href="https://discord.com/users/765696348489121802" target="_blank">SirFluffyNuts</a></span><br><span class="friendList">Friend | <a class="friend" href="https://discord.com/users/985383501589250048" target="_blank">?Spawn</a></span></p>
@@ -43,8 +51,10 @@
 
         </div>
 
+        <!-- Skip Button -->
         <img id="skipBtn" src="images/skip.png" alt="Skip Button" class="glowing-img">
 
+        <!-- Waveform Controls -->
         <div class="controls">
             <button class="formBtn" id="waveformButton" onclick="toggleWaveform('waveform')">W</button>
             <hr>
@@ -57,6 +67,7 @@
             <button id="sendBtn" onclick="pingSend()">Send Ping</button>
         </div>
 
+        <!-- Background Music -->
         <canvas id="waveformCanvas"></canvas>
 
         <audio id="background-music" loop>
@@ -64,6 +75,7 @@
             Your browser does not support the audio element.
         </audio>
 
+        <!-- Phone Number Search Section -->
         <div class="phoneNumberContainer">
             <input type="text" id="phoneNumberInput" placeholder="Enter a Phone Number">
             <div id="phoneNumberResponseContainer"><p id="phoneNumberResponse"></p></div>
@@ -76,6 +88,7 @@
 
     </body>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/pinger.js"></script>
