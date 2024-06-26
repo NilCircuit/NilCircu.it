@@ -371,7 +371,36 @@ canvas {
     width: 200px; /* Adjust the width of the slider as needed */
 }
 
-/* Start of audio controls */
+.playerContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 1%;
+    top: 20%;
+    height: 65px;
+    width: 375px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #2c2c2c;
+    backdrop-filter: blur(7px);
+    border-radius: 15px;
+}
+
+.playerContainer:hover{
+    cursor: default;
+}
+
+#playerText{
+    font-family: Comfortaa;
+    color: #00ffff;
+    text-align: center;
+    font-size: 22px;
+    text-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
+}
+
+/* End of audio controls */
 
 /* Misc */
 

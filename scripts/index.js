@@ -7,6 +7,7 @@ const nextBtn = document.getElementById('skipBtn');
 const smoothingFactor = 0.8; // Adjust smoothing factor (0.0 to 1.0, where higher values mean smoother but slower updates)
 const soundLabel = document.getElementById('speakerIcon');
 const volumeLabel = document.getElementById('volumeLabel');
+const playingText = document.getElementById('playerText');
 let audioContext;
 let audioSrc;
 let analyser;
@@ -172,33 +173,43 @@ function getRandomSong(){
     if (randomSong === 0) {
         music.src = './sounds/dodge_this.mp3';
         document.title = 'NilCircuit | Dodge This';
+        playingText.innerText = 'Now playing - Dodge This';
     } else if (randomSong === 1) {
         music.src = './sounds/speed_is_life.mp3';
         document.title = 'NilCircuit | Speed Is Life';
+        playingText.innerText = 'Now playing - Speed Is Life';
     } else if (randomSong === 2) {
         music.src = './sounds/CuteDepressed.mp3';
         document.title = 'NilCircuit | Cute Depressed';
+        playingText.innerText = 'Now playing - Cute Depressed';
     } else if (randomSong === 3) {
         music.src = './sounds/wyw.mp3';
         document.title = 'NilCircuit | What You Want';
+        playingText.innerText = 'Now playing - What You Want';
     } else if (randomSong === 4) {
         music.src = './sounds/Young_Kid.mp3';
         document.title = 'NilCircuit | Young Kid';
+        playingText.innerText = 'Now playing - Young Kid';
     } else if (randomSong === 5) {
         music.src = './sounds/TOXIC.mp3';
         document.title = 'NilCircuit | TOXIC';
+        playingText.innerText = 'Now playing - TOXIC';
     } else if (randomSong === 6) {
         music.src = './sounds/COWBELL_GOTH.mp3';
         document.title = 'NilCircuit | COWBELL GOTH';
+        playingText.innerText = 'Now playing - COWBELL GOTH';
     } else if (randomSong === 7) {
         music.src = './sounds/On_My_Own.mp3';
         document.title = 'NilCircuit | On My Own';
+        playingText.innerText = 'Now playing - On My Own';
     } else if (randomSong === 8) {
         music.src = './sounds/LOVELY_BASTARDS.mp3';
         document.title = 'NilCircuit | LOVELY BASTARDS';
+        playingText.innerText = 'Now playing - LOVELY BASTARDS';
     } else if (randomSong === 9) {
         music.src = './sounds/NXSTY_BLOOD.mp3';
         document.title = 'NilCircuit | NXSTY BLOOD';
+        playingText.innerText = 'Now playing - NXSTY BLOOD';
     }
     music.play()
 }

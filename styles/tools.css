@@ -44,7 +44,7 @@
     top: 80%;
     margin-left: 5px;
     margin-right: 5px;
-    left: 50%;
+    left: calc(100% - 27%);
     transform: translate(-50%, -50%);
     width: 700px;
     height: 200px;
@@ -150,6 +150,7 @@
     color: rgb(99, 88, 88);
     text-shadow: none;
 }
+
 #actualIP {
     transition: filter 0.3s ease;
     filter: blur(6px);
@@ -182,6 +183,7 @@
 
 #actualIP:hover {
     filter: blur(0px);
+    cursor: default;
 }
 
 #userIP {
