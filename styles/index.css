@@ -376,9 +376,14 @@ canvas {
     display: flex;
     flex-direction: column;
     left: 1%;
-    top: 20%;
-    height: 65px;
-    width: 375px;
+    top: 190px;;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    width: auto;
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid #2c2c2c;
     backdrop-filter: blur(7px);
@@ -393,7 +398,7 @@ canvas {
     font-family: Comfortaa;
     color: #00ffff;
     text-align: center;
-    font-size: 22px;
+    font-size: 17px;
     text-shadow: 
         0 0 5px rgb(0, 247, 255), 
         0 0 10px rgb(0, 247, 255), 
