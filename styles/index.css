@@ -429,3 +429,27 @@ body{
 }
 
 /* End of misc */
+
+/* start of date and time */
+
+.timeContainer{
+    position: absolute;
+    top: 130px;
+    align-items: center;
+    right: -100px;
+    transform: translateX(-50%);
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    z-index: 14;
+}
+#timeText{
+    color: rgb(0, 247, 255);
+    text-shadow: 
+        0 0 5px rgb(0, 38, 255),
+        0 0 10px rgb(0, 17, 255),
+        0 0 15px rgb(4, 0, 255),
+        0 0 20px rgb(0, 17, 255);
+}
+
+/* end of date and time */
