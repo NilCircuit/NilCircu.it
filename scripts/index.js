@@ -167,7 +167,7 @@ music.volume = volumeControl.value;
 function getRandomSong(){
     // Chooses random song
 
-    let randomSong = Math.floor(Math.random() * 10);
+    let randomSong = Math.floor(Math.random() * 11);
     console.log(randomSong);
     music.load()
 
@@ -224,6 +224,11 @@ function getRandomSong(){
             music.src = './sounds/NXSTY_BLOOD.mp3';
             document.title = 'NilCircuit | NXSTY BLOOD';
             playingText.innerText = 'Now playing - NXSTY BLOOD';
+        } else if (randomSong === 10) {
+            lastSong = 10;
+            music.src = './sounds/spotifydown.com - Gillette.mp3';
+            document.title = 'NilCircuit | Gillette';
+            playingText.innerText = 'Now playing - Gillette';
         }
     }
 
