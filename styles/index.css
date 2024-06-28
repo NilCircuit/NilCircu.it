@@ -433,16 +433,32 @@ body{
 /* start of date and time */
 
 .timeContainer{
-    position: absolute;
-    top: 130px;
+    transition: filter 0.3s ease;
+    filter: blur(6px);
+    position: fixed;
+    top: 10px;
     align-items: center;
-    right: -60px;
-    transform: translateX(-50%);
+    right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: auto;
     width: auto;
     font-size: 12px;
     z-index: 14;
+    background-color: #000000;
+    border-radius: 15px;
+    border: 2px solid #2c2c2c;
+    box-shadow: 
+        0 0 5px rgb(0, 247, 255), 
+        0 0 10px rgb(0, 247, 255), 
+        0 0 20px rgb(0, 247, 255);
+    
 }
+
+.timeContainer:hover{
+    filter: blur(0px);
+}
+
 #timeText{
     color: rgb(0, 247, 255);
     text-shadow: 

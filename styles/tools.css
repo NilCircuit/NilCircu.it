@@ -151,12 +151,17 @@
     text-shadow: none;
 }
 
+/* End of pinger */
+
+/* Start of IP Display */
+
 #actualIP {
     transition: filter 0.3s ease;
     filter: blur(6px);
-    position: relative;
+    position: fixed;
+    top: 10px;
     box-shadow: 0 0 15px rgb(0, 0, 0);
-    left: calc(100% - 115px);
+    left: 87.5%;
     padding-top: 3px;
     padding-top: 1px;
     padding-left: 10px;
@@ -164,7 +169,6 @@
     height: auto;
     width: auto;
     font-size: 20px;
-    transform: translateX(-50%);
     font-family: Comfortaa;
     background-color: #000000;
     border-radius: 15px;
@@ -192,4 +196,4 @@
     justify-content: flex-start;
 }
 
-/* End of pinger */
+/* End of IP Display */

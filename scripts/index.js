@@ -232,8 +232,8 @@ function getRandomSong(){
         } else if (randomSong === 11) {
             lastSong = 11;
             music.src = './sounds/spotifydown.com - kompa pasión.mp3';
-            document.title = 'NilCircuit | kompa pasión';
-            playingText.innerText = 'Now playing - kompa pasión';
+            document.title = 'NilCircuit | Kompa Pasión';
+            playingText.innerText = 'Now playing - Kompa Pasión';
         } else if (randomSong === 12) {
             lastSong = 12;
             music.src = './sounds/spotifydown.com - This Feeling.mp3';
