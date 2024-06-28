@@ -469,7 +469,7 @@ body{
 #ipToggle{
     z-index: 14;
     position: relative;
-    background-color: rgba(0, 255, 0, 0.5);
+    background-color: rgb(0, 255, 21);
     box-shadow: 
         0 0 5px rgb(79, 255, 79), 
         0 0 10px rgb(79, 255, 79), 
@@ -479,7 +479,7 @@ body{
 #dateToggle{
     z-index: 14;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0, 255, 21);
     box-shadow: 
         0 0 5px rgb(79, 255, 79), 
         0 0 10px rgb(79, 255, 79), 
@@ -487,7 +487,7 @@ body{
 }
 
 .dateToggleTxt{
-    color: rgb(0, 255, 0);
+    color: rgb(0, 255, 21);
     text-shadow: 
         0 0 5px rgb(79, 255, 79), 
         0 0 10px rgb(79, 255, 79), 
@@ -495,7 +495,7 @@ body{
 }
 
 .ipToggleTxt{
-    color: rgb(0, 255, 0);
+    color: rgb(0, 255, 21);
     text-shadow: 
         0 0 5px rgb(79, 255, 79), 
         0 0 10px rgb(79, 255, 79), 
