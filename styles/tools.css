@@ -156,29 +156,29 @@
 /* Start of IP Display */
 
 #actualIP {
-    transition: filter 0.3s ease;
-    filter: blur(6px);
     position: fixed;
-    top: 10px;
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #000000;
     left: 87.5%;
     padding-top: 3px;
     padding-top: 1px;
     padding-left: 10px;
     padding-right: 4px;
+    border-radius: 15px;
     height: auto;
     width: auto;
-    font-size: 20px;
-    font-family: Comfortaa;
-    background-color: #000000;
-    border-radius: 15px;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     border: 2px solid #2c2c2c;
-    color: #00ffff;
-    text-align: left;
     box-shadow: 
         0 0 5px rgb(0, 247, 255), 
         0 0 10px rgb(0, 247, 255), 
         0 0 20px rgb(0, 247, 255);
+    font-size: 20px;
+    font-family: Comfortaa;
+    color: #00ffff;
+    text-align: left;
     text-shadow: 
         0 0 5px rgb(0, 247, 255), 
         0 0 10px rgb(0, 247, 255), 
@@ -186,14 +186,8 @@
 }
 
 #actualIP:hover {
-    filter: blur(0px);
     cursor: default;
 }
 
-#userIP {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 /* End of IP Display */

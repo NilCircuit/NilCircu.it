@@ -87,13 +87,11 @@
             Your browser does not support the audio element.
         </audio>
 
-        <div id="userIP">
-            <h1 id="actualIP"></h1>
-        <div>
-
         <div class="timeContainer">
             <h1 id="timeText">Date and Time</h1>
         </div>
+
+        <h1 id="actualIP"></h1>
 
         
 
@@ -108,6 +106,11 @@
 
         <div class="playerContainer">
             <p id="playerText">Now playing - SAMPLE_TEXT</p>
+        </div>
+
+        <div class="buttonPanel">
+            <div class="button" id="ipToggle" title="Toggle IP" onclick="toggleIP()"></div><span class="ipToggleTxt">Toggle IP</span>
+            <div class="button" id="dateToggle" title="Toggle Date" onclick="toggleDate()"></div><span class="dateToggleTxt">Toggle Date</span>
         </div>
 
         

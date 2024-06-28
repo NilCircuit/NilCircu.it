@@ -1,4 +1,5 @@
 function Anims() {
+
     this.slideOffScreenRight = function(element, distance, duration) {
         element.style.transform = `translateX(${distance}px)`;
         let lastPos = distance;
@@ -49,6 +50,7 @@ function Anims() {
 
         requestAnimationFrame(animation);
     }
+    
 }
 
 const animate = new Anims();

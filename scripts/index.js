@@ -49,7 +49,7 @@ function drawWaveform() {
     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
     canvasCtx.lineWidth = 2;
-    canvasCtx.strokeStyle = '#00ff00';
+    canvasCtx.strokeStyle = '#00ff44';
 
     canvasCtx.beginPath();
 
@@ -85,7 +85,7 @@ function drawSquareWave() {
     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
     canvasCtx.lineWidth = 3;
-    canvasCtx.strokeStyle = '#ff0000'; // Change stroke color for square waveform
+    canvasCtx.strokeStyle = '#fffb00'; // Change stroke color for square waveform
 
     canvasCtx.beginPath();
 

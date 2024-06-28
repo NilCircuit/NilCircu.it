@@ -428,15 +428,87 @@ body{
     background-color: #1f1f1f00;
 }
 
+.button{
+    border-radius: 100%;
+    border: 2px solid #2c2c2c;
+    width: 25px;
+    height: 25px;
+}
+
+.buttonPanel{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-family: Comfortaa;
+    font-size: 16px;
+    color: rgb(30, 255, 0);
+    gap: 15px;
+    top: -2px;
+    right: -2px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 295px;
+    height: 55px;
+    border: 3px solid #000000;
+    text-shadow: 
+        0 0 5px rgb(21, 255, 0), 
+        0 0 10px rgb(21, 255, 0), 
+        0 0 15px rgb(21, 255, 0);
+}
+
+.buttonPanel:hover{
+    cursor: default;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+#ipToggle{
+    z-index: 14;
+    position: relative;
+    background-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 
+        0 0 5px rgb(79, 255, 79), 
+        0 0 10px rgb(79, 255, 79), 
+        0 0 20px rgb(79, 255, 79);
+}
+
+#dateToggle{
+    z-index: 14;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        0 0 5px rgb(79, 255, 79), 
+        0 0 10px rgb(79, 255, 79), 
+        0 0 20px rgb(79, 255, 79);
+}
+
+.dateToggleTxt{
+    color: rgb(0, 255, 0);
+    text-shadow: 
+        0 0 5px rgb(79, 255, 79), 
+        0 0 10px rgb(79, 255, 79), 
+        0 0 20px rgb(79, 255, 79);
+}
+
+.ipToggleTxt{
+    color: rgb(0, 255, 0);
+    text-shadow: 
+        0 0 5px rgb(79, 255, 79), 
+        0 0 10px rgb(79, 255, 79), 
+        0 0 20px rgb(79, 255, 79);
+}
+
 /* End of misc */
 
 /* start of date and time */
 
 .timeContainer{
-    transition: filter 0.3s ease;
-    filter: blur(6px);
     position: fixed;
-    top: 10px;
+    top: 70px;
     align-items: center;
     right: 10px;
     padding-left: 10px;
@@ -453,10 +525,6 @@ body{
         0 0 10px rgb(0, 247, 255), 
         0 0 20px rgb(0, 247, 255);
     
-}
-
-.timeContainer:hover{
-    filter: blur(0px);
 }
 
 #timeText{
