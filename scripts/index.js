@@ -167,7 +167,7 @@ music.volume = volumeControl.value;
 function getRandomSong(){
     // Chooses random song
 
-    let randomSong = Math.floor(Math.random() * 11);
+    let randomSong = Math.floor(Math.random() * 13);
     console.log(randomSong);
     music.load()
 
@@ -229,6 +229,16 @@ function getRandomSong(){
             music.src = './sounds/spotifydown.com - Gillette.mp3';
             document.title = 'NilCircuit | Gillette';
             playingText.innerText = 'Now playing - Gillette';
+        } else if (randomSong === 11) {
+            lastSong = 11;
+            music.src = './sounds/spotifydown.com - kompa pasión.mp3';
+            document.title = 'NilCircuit | kompa pasión';
+            playingText.innerText = 'Now playing - kompa pasión';
+        } else if (randomSong === 12) {
+            lastSong = 12;
+            music.src = './sounds/spotifydown.com - This Feeling.mp3';
+            document.title = 'NilCircuit | This Feeling';
+            playingText.innerText = 'Now playing - This Feeling';
         }
     }
 
