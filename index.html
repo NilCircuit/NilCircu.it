@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NilCircuit</title>
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/background.css">
         <link rel="stylesheet" href="styles/tools.css">
         <link rel="stylesheet" href="styles/phone_number.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -28,59 +29,68 @@
         </div>
 
         <!-- Volume Control -->
-        <div class="speaker_box">
-            <center>
-                <div class="volume-control-container">
-                    <span class="volume-label-container">
-                        <img id="speakerIcon" src="images/low-vol.png" alt="Speaker Icon" class="speaker-icon">
-                        <p id="volumeLabel">10%</p>
-                    </span>
-                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.075" id="volumeControl">
-                </div>
-            </center>
-        </div>
         
         <!-- Background Image -->
+        <div class="section" id="section1"></div>
+        <div class="section" id="section2"></div>
+        <div class="section" id="section3"></div>
         
-
+        
         <!-- Main Content Container -->
         <div class="mainContainer">
-
+            
             <h1 class='main'>
                 Welcome To NilCircuit
             </h1>
-    
+            
             <!-- Bio Section -->
             <div class="bioContainer">
-    
+                
                 <p class="bio"><span  class="founderList"><br>Founder | <a class="founder" href="https://github.com/astralisllc" target="_blank">Astralis</a><br>Co-Founder | <a class="founder" href="https://github.com/teptonic" target="_blank">Teptonic</a></span><br><span class="friendList">Friend | <a class="friend" href="https://discord.com/users/765696348489121802" target="_blank">SirFluffyNuts</a></span><br><span class="friendList">Friend | <a class="friend" href="https://discord.com/users/985383501589250048" target="_blank">?Spawn</a></span></p>
-        
+                
             </div>
-
             
-
+            
+            
             <!-- Pinger Section -->
             <div class="pingerContainer">
                 <input type="text" id="ipInput" placeholder="Enter a URL to ping">
                 <div id="pingResponseContainer"><p id="pingResponse"></p></div>
                 <button class="btn" onclick="pingSend()">Send Ping</button>
             </div>
-
+            
         </div>
-
+        
         <!-- Skip Button -->
-        <img id="skipBtn" src="images/skip.png" alt="Skip Button" class="glowing-img">
-
+        
         <!-- Waveform Controls -->
-        <div class="controls">
-            <button class="formBtn" id="waveformButton" onclick="toggleWaveform('waveform')">W</button>
-            <hr>
-            <button class="formBtn" id="squareWaveButton" onclick="toggleWaveform('square')">S</button>
+        <div class="audioSection">
+            <img id="skipBtn" src="images/skip.png" alt="Skip Button" class="glowing-img">
+            <div class="controls">
+                <button class="formBtn" id="waveformButton" onclick="toggleWaveform('waveform')">W</button>
+                <hr>
+                <button class="formBtn" id="squareWaveButton" onclick="toggleWaveform('square')">S</button>
+            </div>
+            
+            <canvas id="waveformCanvas"></canvas>
+            
+            <div class="speaker_box">
+                <center>
+                    <div class="volume-control-container">
+                        <span class="volume-label-container">
+                            <img id="speakerIcon" src="images/low-vol.png" alt="Speaker Icon" class="speaker-icon">
+                            <p id="volumeLabel">10%</p>
+                        </span>
+                        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.075" id="volumeControl">
+                    </div>
+                </center>
+            </div>
+            <div class="playerContainer">
+                <p id="playerText">Now playing - SAMPLE_TEXT</p>
+            </div>
         </div>
-
-
+        
         <!-- Background Music -->
-        <canvas id="waveformCanvas"></canvas>
 
         <audio id="background-music" loop>
             <source src="sounds/CuteDepressed.mp3" type="audio/mpeg">
@@ -106,9 +116,6 @@
             <button class="btn" onclick="numberSend()">Search for Information</button>
         </div>
 
-        <div class="playerContainer">
-            <p id="playerText">Now playing - SAMPLE_TEXT</p>
-        </div>
 
         <div class="buttonPanel">
             <div class="button" id="ipToggle" title="Toggle IP" onclick="toggleIP()"></div><span class="ipToggleTxt">Toggle IP</span>

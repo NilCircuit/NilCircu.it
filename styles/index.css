@@ -272,6 +272,11 @@ canvas {
     border-radius: 15px;
 }
 
+.audioSection{
+    position: fixed;
+    z-index: 100;
+}
+
 .controls {
     position: fixed;
     top: 20px;
@@ -414,11 +419,6 @@ audio {
     margin-top: 20px;
 }
 
-body{
-    background-image: url('../images/car_driving.gif');
-    height: 100%;
-}
-
 .mainContainer{
     position: absolute;
     width: 100%;
@@ -450,6 +450,7 @@ body{
     border-bottom-left-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 295px;
+    z-index: 14;
     height: 55px;
     border: 3px solid #000000;
     text-shadow: 

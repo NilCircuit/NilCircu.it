@@ -252,3 +252,32 @@ function getRandomSong(){
 }
 
 nextBtn.addEventListener('click', getRandomSong)
+
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        let opacity = 0;
+
+        // Calculate the opacity based on the scroll position within the section
+        if (scrollPosition >= sectionTop - windowHeight && scrollPosition <= sectionTop + sectionHeight) {
+            opacity = 2 - (scrollPosition - sectionTop + windowHeight) / (windowHeight + sectionHeight);
+        } else if (scrollPosition < sectionTop - windowHeight) {
+            opacity = 1;
+        }
+
+        // Ensure opacity stays within 0 to 1 range
+        opacity = Math.min(1, Math.max(0, opacity));
+
+        // Apply the opacity to the section
+        section.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places for smoother effect
+    });
+});
+
+
+
+
