@@ -167,7 +167,7 @@ music.volume = volumeControl.value;
 function getRandomSong(){
     // Chooses random song
 
-    let randomSong = Math.floor(Math.random() * 13);
+    let randomSong = Math.floor(Math.random() * 14);
     console.log(randomSong);
     music.load()
 
@@ -239,6 +239,11 @@ function getRandomSong(){
             music.src = './sounds/spotifydown.com - This Feeling.mp3';
             document.title = 'NilCircuit | This Feeling';
             playingText.innerText = 'Now playing - This Feeling';
+        } else if (randomSong === 13) {
+            lastSong = 13;
+            music.src = './sounds/spotifydown.com - On Top (feat. T-Shirt).mp3';
+            document.title = 'NilCircuit | On Top';
+            playingText.innerText = 'Now playing - On Top';
         }
     }
 
