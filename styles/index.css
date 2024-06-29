@@ -85,7 +85,7 @@ h1.main {
     width: 700px;
     height: 300px;
     left: 50%;
-    top: 50%;
+    top: 350px;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
