@@ -1,5 +1,5 @@
 const timeContainer = document.getElementsByClassName('timeContainer')[0];
-const ipContainer = document.getElementById('actualIP');
+const ipContainer = document.getElementsByClassName('IPContainer')[0];
 const ipToggleBtn = document.getElementById('ipToggle');
 const dateToggleBtn = document.getElementById('dateToggle');
 const ipToggleTxt = document.getElementsByClassName('ipToggleTxt')[0];

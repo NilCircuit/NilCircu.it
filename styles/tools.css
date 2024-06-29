@@ -155,38 +155,30 @@
 
 /* Start of IP Display */
 
-#actualIP {
+.IPContainer{
     position: fixed;
-    background-color: #000000;
-    left: 87.5%;
-    padding-top: 3px;
-    padding-top: 1px;
-    padding-left: 10px;
-    padding-right: 4px;
-    border-radius: 15px;
-    height: auto;
-    width: auto;
     top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    right: 10px;
     border: 2px solid #2c2c2c;
     box-shadow: 
         0 0 5px rgb(0, 247, 255), 
         0 0 10px rgb(0, 247, 255), 
         0 0 20px rgb(0, 247, 255);
-    font-size: 20px;
-    font-family: Comfortaa;
-    color: #00ffff;
-    text-align: left;
-    text-shadow: 
-        0 0 5px rgb(0, 247, 255), 
-        0 0 10px rgb(0, 247, 255), 
-        0 0 15px rgb(0, 17, 255);
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: -15px;
+    padding-bottom: -15px;
+    height: auto;
+    width: auto;
 }
 
-#actualIP:hover {
-    cursor: default;
+#IPText{
+    font-size: 20px;
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 5px rgb(0, 26, 255),
+                0 0 10px rgb(0, 26, 255),
+                0 0 15px rgb(0, 26, 255);
 }
 
 

@@ -1,4 +1,4 @@
-const userIP = document.getElementById('actualIP');
+const userIP = document.getElementById('IPText');
 const ipInput = document.getElementById('ipInput');
 const responseText = document.getElementById('pingResponse');
 
