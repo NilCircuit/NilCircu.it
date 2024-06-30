@@ -73,6 +73,7 @@
 }
 
 #pingResponse{
+    user-select: none;
     color: #00ffff;
     text-align: center;
     font-size: 22px;
@@ -118,6 +119,7 @@
 }
 
 .btn{
+    user-select: none;
     transition: box-shadow 500ms;
     position: relative;
     font-size: 22px;
@@ -176,6 +178,7 @@
 }
 
 #IPText{
+    user-select: none;
     font-family: Comfortaa;
     font-size: 20px;
     color: rgb(0, 255, 255);

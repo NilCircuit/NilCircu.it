@@ -45,6 +45,7 @@
 }
 
 h1.main_text {
+    user-select: none;
     margin: 0;
     text-align: center;
     color: rgb(0, 247, 255);
@@ -89,6 +90,7 @@ h1.main_text {
 }
 
 .bio{
+    user-select: none;
     font-size: 30px;
     text-align: center;
     color: rgb(0, 247, 255);
@@ -100,10 +102,12 @@ h1.main_text {
 }
 
 .founderList{
+    user-select: none;
     color: rgb(255, 196, 0);
 }
 
 .founder{
+    user-select: none;
     color: rgb(255, 196, 0);
 }
 .founder:active{
@@ -123,10 +127,12 @@ h1.main_text {
 }
 
 .friendList{
+    user-select: none;
     color: #2bff01;
 }
 
 .friend{
+    user-select: none;
     color: #2bff01;
 }
 .friend:link{
@@ -282,6 +288,7 @@ canvas {
 }
 
 .formBtn{
+    user-select: none;
     background-color: #00000000;
     border-radius: 15px;
     color: #00ffff;
@@ -302,6 +309,7 @@ canvas {
 }
 
 #skipBtn{
+    user-select: none;
     transition: box-shadow 200ms;
     position: fixed;
     display: flex;
@@ -337,6 +345,7 @@ canvas {
 }
 
 #volumeLabel{
+    user-select: none;
     font-family: Comfortaa;
     color: #00f7ff;
     text-shadow: 
@@ -391,6 +400,7 @@ canvas {
 }
 
 #playerText{
+    user-select: none;
     font-family: Comfortaa;
     color: #00ffff;
     text-align: center;
@@ -420,6 +430,7 @@ audio {
 }
 
 .button{
+    user-select: none;
     border-radius: 100%;
     border: 2px solid #2c2c2c;
     width: 25px;
@@ -479,6 +490,7 @@ audio {
 }
 
 .dateToggleTxt{
+    user-select: none;
     color: rgb(0, 255, 21);
     text-shadow: 
         0 0 5px rgb(79, 255, 79), 
@@ -487,6 +499,7 @@ audio {
 }
 
 .ipToggleTxt{
+    user-select: none;
     color: rgb(0, 255, 21);
     text-shadow: 
         0 0 5px rgb(79, 255, 79), 
@@ -520,6 +533,7 @@ audio {
 }
 
 #timeText{
+    user-select: none;
     color: rgb(0, 247, 255);
     text-shadow: 
         0 0 5px rgb(0, 38, 255),
