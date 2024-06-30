@@ -44,7 +44,7 @@
     align-items: center;
 }
 
-.main_text {
+h1.main_text {
     margin: 0;
     text-align: center;
     color: rgb(0, 247, 255);
@@ -174,7 +174,6 @@
     font-family: Comfortaa;
     top: 50%;
     transform: translateY(-50%);
-    animation: pulse 2s ease-in-out infinite;
     text-shadow: 
         0 0 5px rgb(94, 255, 0), 
         0 0 10px rgb(94, 255, 0), 
