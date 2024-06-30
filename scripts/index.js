@@ -267,7 +267,7 @@ window.addEventListener('scroll', function() {
         if (scrollPosition >= sectionTop - windowHeight && scrollPosition <= sectionTop + sectionHeight) {
             opacity = 2 - (scrollPosition - sectionTop + windowHeight) / (windowHeight + sectionHeight);
         } else if (scrollPosition < sectionTop - windowHeight) {
-            opacity = 1;
+            opacity = 0.5;
         }
 
         // Ensure opacity stays within 0 to 1 range
