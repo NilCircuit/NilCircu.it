@@ -4,6 +4,7 @@ const ipToggleBtn = document.getElementById('ipToggle');
 const dateToggleBtn = document.getElementById('dateToggle');
 const ipToggleTxt = document.getElementsByClassName('ipToggleTxt')[0];
 const dateToggleTxt = document.getElementsByClassName('dateToggleTxt')[0];
+const clickSfx = document.getElementById('clickSfx');
 let ipToggled = false;
 let dateToggled = false;
 
@@ -21,6 +22,8 @@ let offColorButtonColor = `rgba(255, 0, 0)`;
 
 
 function toggleIP(){
+    clickSfx.load()
+    clickSfx.play()
     if (ipToggled == false) {
         // Slide off of screen
         animate.slideOnScreenRight(ipContainer, -500, 750)
@@ -40,6 +43,8 @@ function toggleIP(){
 }
 
 function toggleDate(){
+    clickSfx.load()
+    clickSfx.play()
     if (dateToggled == false) {
         // Slide off of screen
         animate.slideOnScreenRight(timeContainer, -500, 750)
