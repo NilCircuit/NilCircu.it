@@ -32,54 +32,46 @@
     src: url('../fonts/Raleway-Light.ttf');
 }
 
-@keyframes pulse2 {
-    0% {
-        font-size: 44px;
-        text-shadow: 
-            0 0 15px rgb(0, 166, 172), 
-            0 0 20px rgb(0, 166, 172), 
-            0 0 30px rgb(0, 166, 172);
-        transform-origin: center center;
-    }
-    50% {
-        font-size: 45px;
-        text-shadow: 
-            0 0 25px rgb(0, 60, 255), 
-            0 0 30px rgb(0, 60, 255), 
-            0 0 40px rgb(0, 60, 255);
-        transform-origin: center center;
-    }
-    100% {
-        font-size: 44px;
-        text-shadow: 
-            0 0 15px rgb(0, 166, 172), 
-            0 0 20px rgb(0, 166, 172), 
-            0 0 30px rgb(0, 166, 172);
-        transform-origin: center center;
-    }
-}
-  
-/* End of rulesets */
-
-/* Start of bio */
-
-h1.main {
+.main_text_container {
     position: absolute;
+    top: 60px; /* Position from the top */
     left: 50%;
-    top: 30px;
-    transform: translate(-50%, -50%);
-    font-size: 44px;
+    transform: translateX(-50%);
+    width: 1000px; /* Initial width */
+    height: 500px; /* Initial height */
+    border: 2px white;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_text {
+    margin: 0;
     text-align: center;
     color: rgb(0, 247, 255);
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     text-shadow: 
         0 0 5px rgb(0, 247, 255), 
         0 0 10px rgb(0, 247, 255), 
         0 0 20px rgb(0, 247, 255);
-    animation: pulse2 2s ease-in-out infinite;
-    transform-origin: center center;
+    animation: pulse 2s ease-in-out infinite;
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.5); /* Initial size */
+        text-shadow: 
+            0 0 15px rgb(0, 166, 172), 
+            0 0 20px rgb(0, 166, 172), 
+            0 0 30px rgb(0, 166, 172);
+    }
+    50% {
+        transform: scale(1.55); /* Expanded size */
+        text-shadow: 
+            0 0 25px rgb(0, 60, 255), 
+            0 0 30px rgb(0, 60, 255), 
+            0 0 40px rgb(0, 60, 255);
+    }
+}
 .bioContainer{
     position: absolute;
     width: 700px;
