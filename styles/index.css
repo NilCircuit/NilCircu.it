@@ -523,26 +523,26 @@ a{
     position: fixed;
     width: 25px;
     height: 25px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     border: 2px solid #00ffff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
                 0 0 20px rgb(0, 247, 255);
-    z-index: 997;
+    z-index: 999;
 }
 
 #cursorPoint{
     position: fixed;
     width: 10px;
     height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     border: 2px solid #00ffff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
                 0 0 20px rgb(0, 247, 255);
-    z-index: 996;
+    z-index: 999;
 }
 
 
