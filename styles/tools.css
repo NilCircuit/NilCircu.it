@@ -120,6 +120,7 @@
 
 .btn{
     user-select: none;
+    cursor: none;
     transition: box-shadow 500ms;
     position: relative;
     font-size: 22px;
@@ -145,7 +146,6 @@
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
                 0 0 20px rgb(0, 247, 255);
-    cursor: pointer;
 }
 
 #ipInput::placeholder{

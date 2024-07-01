@@ -281,3 +281,24 @@ window.addEventListener('scroll', function() {
 
 
 
+const pointer = document.getElementById('cursor');
+const pointerPoint = document.getElementById('cursorPoint');
+
+pointer.style.pointerEvents = 'none';
+pointerPoint.style.pointerEvents = 'none';
+
+let mainLoop = (e) => {
+    let xPos = e.clientX;
+    let yPos = e.clientY;
+
+    // I want you to set the pointer (div) position here
+    pointerPoint.style.left = xPos + 'px';
+    pointerPoint.style.top = yPos + 'px';
+    pointerPoint.style.transform = 'translate(-50%, -50%)';
+    pointer.style.left = (xPos + 5) + 'px';
+    pointer.style.top = (yPos + 5) + 'px';
+    
+    console.log(`Pos: ${pointer.style.left}, ${pointer.style.top}`)
+}
+
+window.addEventListener('mousemove', mainLoop)

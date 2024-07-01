@@ -37,6 +37,7 @@
 
 #phoneNumberInput{
     transition: box-shadow 100ms;
+    cursor: none;
     position: relative;
     box-shadow: 0 0 15px rgb(0, 0, 0);
     left: 50%;
