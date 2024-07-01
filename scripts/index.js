@@ -253,29 +253,20 @@ function getRandomSong(){
 
 nextBtn.addEventListener('click', getRandomSong)
 
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section');
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
+const sections = document.querySelectorAll('.section');
 
-    sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        let opacity = 0;
-
-        // Calculate the opacity based on the scroll position within the section
-        if (scrollPosition >= sectionTop - windowHeight && scrollPosition <= sectionTop + sectionHeight) {
-            opacity = 2 - (scrollPosition - sectionTop + windowHeight) / (windowHeight + sectionHeight);
-        } else if (scrollPosition < sectionTop - windowHeight) {
-            opacity = 0.5;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
         }
-
-        // Ensure opacity stays within 0 to 1 range
-        opacity = Math.min(1, Math.max(0, opacity));
-
-        // Apply the opacity to the section
-        section.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places for smoother effect
     });
+}, { threshold: 0.01 });
+
+sections.forEach(section => {
+    observer.observe(section);
 });
 
 
@@ -294,11 +285,31 @@ let mainLoop = (e) => {
     // I want you to set the pointer (div) position here
     pointerPoint.style.left = xPos + 'px';
     pointerPoint.style.top = yPos + 'px';
-    pointerPoint.style.transform = 'translate(-50%, -50%)';
+    // pointerPoint.style.transform = 'translate(-50%, -50%)';
     pointer.style.left = (xPos + 5) + 'px';
     pointer.style.top = (yPos + 5) + 'px';
     
     console.log(`Pos: ${pointer.style.left}, ${pointer.style.top}`)
+
+    let currentElement = document.elementFromPoint(xPos, yPos);
+
+    if (currentElement.className == 'btn' || currentElement.className == 'button') {
+        pointer.style.boxShadow = '0 0 5px rgb(247, 0, 45),  0 0 10px rgb(247, 0, 450), 0 0 20px rgb(247, 0, 45)';
+        pointerPoint.style.boxShadow = '0 0 5px rgb(247, 0, 45),  0 0 10px rgb(247, 0, 450), 0 0 20px rgb(247, 0, 45)';
+        pointer.style.borderColor = 'rgb(247, 0, 45)';
+        pointerPoint.style.borderColor = 'rgb(247, 0, 45)';
+        console.log(`Hovering over a selectable: ${currentElement.className}`)
+    } else {
+        pointer.style.boxShadow = '0 0 5px rgb(255, 115, 0),  0 0 10px rgb(255, 115, 0), 0 0 20px rgb(255, 115, 0)';
+        pointerPoint.style.boxShadow = '0 0 5px rgb(255, 115, 0),  0 0 10px rgb(255, 115, 0), 0 0 20px rgb(255, 115, 0)';
+        pointer.style.borderColor = 'rgb(255, 115, 0)';
+        pointerPoint.style.borderColor = 'rgb(255, 115, 0)';
+        console.log('No element hovered!')
+    }
+
 }
 
 window.addEventListener('mousemove', mainLoop)
+
+
+
