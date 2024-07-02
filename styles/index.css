@@ -335,15 +335,6 @@ canvas {
     box-shadow: 0 0 5px #48ff00, 0 0 10px #48ff00, 0 0 15px #48ff00;
     opacity: 1;
 }
-.glowing-img {
-    width: 60px; /* Adjust the size as needed */
-    height: 60px; /* Adjust the size as needed */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.glowing-img:hover {
-    box-shadow: 0 0 20px rgba(102, 255, 0, 0.8), 0 0 30px rgba(102, 255, 0, 0.8), 0 0 40px rgba(102, 255, 0, 0.8);
-}
 
 #volumeLabel{
     user-select: none;

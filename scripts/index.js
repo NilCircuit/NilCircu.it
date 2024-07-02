@@ -294,16 +294,16 @@ let mainLoop = (e) => {
     let currentElement = document.elementFromPoint(xPos, yPos);
 
     if (currentElement.className == 'btn' || currentElement.className == 'button') {
-        pointer.style.boxShadow = '0 0 5px rgb(247, 0, 45),  0 0 10px rgb(247, 0, 450), 0 0 20px rgb(247, 0, 45)';
-        pointerPoint.style.boxShadow = '0 0 5px rgb(247, 0, 45),  0 0 10px rgb(247, 0, 450), 0 0 20px rgb(247, 0, 45)';
-        pointer.style.borderColor = 'rgb(247, 0, 45)';
-        pointerPoint.style.borderColor = 'rgb(247, 0, 45)';
+        pointer.style.boxShadow = '0 0 5px rgb(242, 255, 0),  0 0 10px rgb(242, 255, 0), 0 0 20px rgb(242, 255, 0)';
+        pointerPoint.style.boxShadow = '0 0 5px rgb(242, 255, 0),  0 0 10px rgb(242, 255, 0), 0 0 20px rgb(242, 255, 0)';
+        pointer.style.borderColor = 'rgb(2242, 255, 0)';
+        pointerPoint.style.borderColor = 'rgb(242, 255, 0)';
         console.log(`Hovering over a selectable: ${currentElement.className}`)
     } else {
-        pointer.style.boxShadow = '0 0 5px rgb(255, 115, 0),  0 0 10px rgb(255, 115, 0), 0 0 20px rgb(255, 115, 0)';
-        pointerPoint.style.boxShadow = '0 0 5px rgb(255, 115, 0),  0 0 10px rgb(255, 115, 0), 0 0 20px rgb(255, 115, 0)';
-        pointer.style.borderColor = 'rgb(255, 115, 0)';
-        pointerPoint.style.borderColor = 'rgb(255, 115, 0)';
+        pointer.style.boxShadow = '0 0 5px rgb(255, 255, 255),  0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255)';
+        pointerPoint.style.boxShadow = '0 0 5px rgb(255, 255, 255),  0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255)';
+        pointer.style.borderColor = 'rgb(255, 255, 255)';
+        pointerPoint.style.borderColor = 'rgb(255, 255, 255)';
         console.log('No element hovered!')
     }
 
