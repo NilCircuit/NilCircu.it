@@ -31,6 +31,7 @@ async function getUserIPAddress() {
         userIP.innerText = `IP - ${data.ip}\nCity - ${data.city}\nRegion - ${data.region}\nCountry - ${data.country}\nPostal - ${data.postal}`;
     } catch (error) {
         console.error('Error fetching IP address:', error);
+        userIP.innerText = `IP - N/A\nCity - N/A\nRegion - N/A\nCountry - N/A\nPostal - N/A\nErr: ${error}`;
         return 'Unknown';
     }
 }
