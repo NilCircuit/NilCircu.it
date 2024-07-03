@@ -293,7 +293,7 @@ let mainLoop = (e) => {
 
     let currentElement = document.elementFromPoint(xPos, yPos);
 
-    if (currentElement.className == 'btn' || currentElement.className == 'button') {
+    if (currentElement.className == 'btn' || currentElement.className == 'button' || currentElement.className == 'controls' || currentElement.className == 'formBtn' || currentElement.className == 'divider' || currentElement.id == 'phoneNumberInput' || currentElement.id == 'ipInput' || currentElement.className == 'friend' || currentElement.className == 'founder' || currentElement.className == 'volume-slider') {
         pointer.style.boxShadow = '0 0 5px rgb(242, 255, 0),  0 0 10px rgb(242, 255, 0), 0 0 20px rgb(242, 255, 0)';
         pointerPoint.style.boxShadow = '0 0 5px rgb(242, 255, 0),  0 0 10px rgb(242, 255, 0), 0 0 20px rgb(242, 255, 0)';
         pointer.style.borderColor = 'rgb(2242, 255, 0)';
