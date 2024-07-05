@@ -37,7 +37,7 @@
     top: 60px; /* Position from the top */
     left: 50%;
     transform: translateX(-50%);
-    width: 1000px; /* Initial width */
+    width: 400px; /* Initial width */
     height: 500px; /* Initial height */
     border: 2px white;
     justify-content: center;
