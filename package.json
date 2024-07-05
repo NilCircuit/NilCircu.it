@@ -1,0 +1,11 @@
+{
+  "name": "puppeteer-scraper",
+  "version": "1.0.0",
+  "main": "scripts/phone_number.js",  
+  "scripts": {
+    "start": "node scripts/phone_number.js"  
+  },
+  "dependencies": {
+    "puppeteer": "^19.0.0"
+  }
+}
