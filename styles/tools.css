@@ -83,7 +83,7 @@
         0 0 20px rgb(0, 247, 255);
 }
 
-#ipInput{
+#urlInput{
     transition: box-shadow 100ms;
     position: relative;
     cursor: none;
@@ -105,14 +105,14 @@
         0 0 20px rgb(0, 247, 255);
 }
 
-#ipInput:hover{
+#urlInput:hover{
     transition: box-shadow 500ms;
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
                 0 0 20px rgb(0, 247, 255);
 }
 
-#ipInput:focus{
+#urlInput:focus{
     transition: box-shadow 100ms;
     box-shadow: 0 0 5px rgb(0, 247, 255), 
                 0 0 10px rgb(0, 247, 255), 
@@ -149,7 +149,7 @@
                 0 0 20px rgb(0, 247, 255);
 }
 
-#ipInput::placeholder{
+#urlInput::placeholder{
     color: rgb(99, 88, 88);
     text-shadow: none;
 }

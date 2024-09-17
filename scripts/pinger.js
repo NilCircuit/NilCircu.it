@@ -1,29 +1,32 @@
 const userIP = document.getElementById('IPText');
-const ipInput = document.getElementById('ipInput');
+const urlInput = document.getElementById('urlInput');
 const responseText = document.getElementById('pingResponse');
 
-
 async function pingSend() {
-    const url = ipInput.value.startsWith('https://') ? ipInput.value : `https://${ipInput.value}`;
+    const proxyUrl = 'http://localhost:8080/';
+    const targetUrl = urlInput.value.startsWith('http://') || urlInput.value.startsWith('https://')
+        ? urlInput.value
+        : `https://${urlInput.value}`;
+    const url = `${proxyUrl}${encodeURIComponent(targetUrl)}`;
 
     try {
-        // Ping the URL
-        ping.ping(url, function(err, data) {
-            if (err) {
-                responseText.innerText = `Error loading resource: ${err}`;
-                return;
-            }
+        const start = Date.now(); // Start time
+        const response = await fetch(url, { method: 'HEAD' });
+        const end = Date.now(); // End time
 
-            // Display response time
-            const responseTime = data;
-            responseText.innerText = `Response Time (MS): ${responseTime}`;
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-        });
+        const responseTime = end - start;
+        responseText.innerText = `Response Time (MS): ${responseTime}`;
     } catch (error) {
         console.error('Error in pingSend:', error);
         responseText.innerText = `Error in ping: ${error.message}`;
     }
 }
+
+
 async function getUserIPAddress() {
     try {
         const response = await fetch('https://ipinfo.io/json');

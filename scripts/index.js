@@ -288,8 +288,7 @@ let mainLoop = (e) => {
     // pointerPoint.style.transform = 'translate(-50%, -50%)';
     pointer.style.left = (xPos + 5) + 'px';
     pointer.style.top = (yPos + 5) + 'px';
-    
-    console.log(`Pos: ${pointer.style.left}, ${pointer.style.top}`)
+
 
     let currentElement = document.elementFromPoint(xPos, yPos);
 
@@ -298,13 +297,11 @@ let mainLoop = (e) => {
         pointerPoint.style.boxShadow = '0 0 5px rgb(242, 255, 0),  0 0 10px rgb(242, 255, 0), 0 0 20px rgb(242, 255, 0)';
         pointer.style.borderColor = 'rgb(2242, 255, 0)';
         pointerPoint.style.borderColor = 'rgb(242, 255, 0)';
-        console.log(`Hovering over a selectable: ${currentElement.className}`)
     } else {
         pointer.style.boxShadow = '0 0 5px rgb(255, 255, 255),  0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255)';
         pointerPoint.style.boxShadow = '0 0 5px rgb(255, 255, 255),  0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255)';
         pointer.style.borderColor = 'rgb(255, 255, 255)';
         pointerPoint.style.borderColor = 'rgb(255, 255, 255)';
-        console.log('No element hovered!')
     }
 
 }

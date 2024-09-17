@@ -1,11 +1,14 @@
 {
   "name": "puppeteer-scraper",
   "version": "1.0.0",
-  "main": "scripts/phone_number.js",  
+  "main": "scripts/phone_number.js",
   "scripts": {
-    "start": "node scripts/phone_number.js"  
+    "start": "node scripts/phone_number.js"
   },
   "dependencies": {
-    "puppeteer": "^19.0.0"
+    "cors": "^2.8.5",
+    "cors-anywhere": "^0.4.4",
+    "express": "^4.21.0",
+    "puppeteer": "^23.3.0"
   }
 }

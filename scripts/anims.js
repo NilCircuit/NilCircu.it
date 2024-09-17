@@ -1,3 +1,4 @@
+
 function Anims() {
 
     this.slideOffScreenRight = function(element, distance, duration) {
